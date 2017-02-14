@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Hooked";
+    src: url("../assets/hooked.otf") format("opentype");
+}
+
+
+@keyframes colorchanger {
+    0%  {background-color: #0074D9;}
+    7%  {background-color: #39CCCC;}
+    14%  {background-color: #3D9970;}
+    21%  {background-color: #2ECC40;}
+    28%  {background-color: #01FF70;}
+    35%  {background-color: #FFDC00;}
+    42%  {background-color: #FF851B;}
+    56% {background-color: #FF4136;}
+    63% {background-color: #85144b;}
+    70% {background-color: #F012BE;}
+    77% {background-color: #B10DC9;}
+    84% {background-color: #111111;}
+    91% {background-color: #AAAAAA;}
+    98% {background-color: #DDDDDD;}
+    100% {background-color: #0074D9;}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+	background: no-repeat fixed hsla(205, 95%, 15%, 1);
+}
+.frame {
+	height: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+.item {
+}
+.item:first-child {
+	background: #7FDBFF;
+	width: 100%;
+	text-align: center;
+	min-height: 1%;
+	animation-name: colorchanger;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.item:last-child {
+	font-family: "Hooked";
+	font-size: 1em;
+	color: white;
+}
+
+.center {
+	font-family: "Hooked";
+	font-size: 3em;
+	color: white;
+}
