@@ -1,25 +1,16 @@
+:root {
+  --circle-size: 25px;
+}
+
 @font-face {
     font-family: "Hooked";
     src: url("../assets/hooked.otf") format("opentype");
 }
 
-
 @keyframes colorchanger {
-    0%  {background-color: #0074D9;}
-    7%  {background-color: #39CCCC;}
-    14%  {background-color: #3D9970;}
-    21%  {background-color: #2ECC40;}
-    28%  {background-color: #01FF70;}
-    35%  {background-color: #FFDC00;}
-    42%  {background-color: #FF851B;}
-    56% {background-color: #FF4136;}
-    63% {background-color: #85144b;}
-    70% {background-color: #F012BE;}
-    77% {background-color: #B10DC9;}
-    84% {background-color: #111111;}
-    91% {background-color: #AAAAAA;}
-    98% {background-color: #DDDDDD;}
-    100% {background-color: #0074D9;}
+    0%  {background-position: 0% 47%;}
+    50%  {background-position: 100% 54%;}
+    100% {background-position: 0% 47%;}
 }
 
 body {
@@ -42,22 +33,52 @@ body {
 .item {
 }
 .item:first-child {
-	background: #7FDBFF;
+	background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
 	width: 100%;
 	text-align: center;
 	min-height: 1%;
-	animation-name: colorchanger;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+    animation: colorchanger 2s ease infinite;
 }
 .item:last-child {
 	font-family: "Hooked";
 	font-size: 1em;
 	color: white;
+	display: flex;
+	align-items:flex-end;
+	width: 100%;
+	justify-content:space-around;
 }
 
 .center {
 	font-family: "Hooked";
 	font-size: 3em;
 	color: white;
+}
+
+.circle {
+	background-color: #fff;
+	margin: calc(var(--circle-size)/2*-1);
+	width: var(--circle-size);
+	height: var(--circle-size);
+	border-radius: 100%;
+}
+
+.circle:hover {
+	animation: moveUp 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	color: #000;
+}
+
+@keyframes moveUp {
+	from {
+		margin: calc(var(--circle-size)/2*-1);
+		width: var(--circle-size);
+		height: var(--circle-size);
+	}
+	to {
+		margin: 0px;
+		width: calc(var(--circle-size)*4); 
+		height: calc(var(--circle-size)*4);
+	}
 }
