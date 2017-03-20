@@ -2,20 +2,25 @@
 <html>
 <head>
 	<title>cben.co</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="icon" type="image/png" href="assets/favicon-96x96.png">
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 <div class="frame">
 	<div class="item"></div>
-	<div class="item center">Hallo</div>
+	<div class="item center">
+		<span id="greetings">Hallo</span>
+		<span class="blink">|</span>
+	</div>
 	<div class="item">
-            <div class="circle"></div>
        	    <div class="footer">
     		Made with <i class="fa fa-coffee" aria-hidden="true"></i> by Chris Ben</div>
   	    <div class="circle"></div>
 	</div>
 </div>
+<script>window.onload = typer.setInterval; </script>
 </body>
 </html>

@@ -7,6 +7,11 @@
     src: url("../assets/hooked.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Typewriter";
+    src: url("../assets/Typewriter.ttf") format("truetype");
+}
+
 @keyframes colorchanger {
     0%  {background-position: 0% 47%;}
     50%  {background-position: 100% 54%;}
@@ -50,7 +55,7 @@ body {
 }
 
 .center {
-	font-family: "Hooked";
+	font-family: "Typewriter";
 	font-size: 3em;
 	color: white;
 }
@@ -68,6 +73,37 @@ body {
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 	color: #000;
+}
+
+.blink {
+    color: #6b889d;
+    animation: 2s linear 0s normal none infinite blink;
+    -webkit-animation: 2s ease-out 0s normal none infinite blink;
+    -moz-animation: 2s ease-out 0s normal none infinite blink;
+    -o-animation: 2s ease-out 0s normal none infinite blink;
+}
+
+@keyframes blink {
+    0% {
+    	opacity: 1;
+	}
+	50% {
+	    opacity: 0;
+	}
+	100% {
+	    opacity: 1;
+	}
+}
+@-webkit-keyframes blink {
+	0% {
+	    opacity: 1;
+	}
+	50% {
+	    opacity: 0;
+	}
+	100% {
+	    opacity: 1;
+	}
 }
 
 @keyframes moveUp {
