@@ -53,6 +53,27 @@ typer.stopInterval = () => {
 	typer.interval = null;
 }
 
+var circles = {};
+
+circles.circleList = [
+	{"circle": "circleLeft", "span": "aboutme"},
+	{"circle": "circleRight", "span": "projects"}
+];
+
+circles.addListeners = () => {
+	circles.circleList.forEach((el) => {
+		circles.setListener(el.circle, el.span, "mouseover", "visible");
+		circles.setListener(el.circle, el.span, "mouseout", "hidden");
+	});
+}
+
+circles.setListener = (element, subelement, event, effect) => {
+	document.getElementById(element)
+		.addEventListener(event, (e) => {
+			document.getElementById(subelement).style.visibility = effect;
+		});
+}
+
 
 
 

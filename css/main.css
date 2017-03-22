@@ -75,6 +75,7 @@ body {
 
 .circle {
 	background-color: #fff;
+	color: #000;
 	margin: calc(var(--circle-size)/2*-1);
 	width: var(--circle-size);
 	height: var(--circle-size);
@@ -85,7 +86,14 @@ body {
 	animation: moveUp 1s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
-	color: #000;
+}
+.circle > span {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    visibility:hidden;
 }
 
 .blink {
